@@ -32,18 +32,18 @@ random.seed(0)
 def get_params():
     parser = argparse.ArgumentParser()
     parser.add_argument('-lr', '--learning_rate', default = 5e-05, type=float) 
-    parser.add_argument('-bc', '--base_model_ckpt') #
-    parser.add_argument('-tr', '--train_set') #
-    parser.add_argument('-vl', '--valid_set') # 
+    parser.add_argument('-bc', '--base_model_ckpt', type=str) #
+    parser.add_argument('-tr', '--train_set', type=str) #
+    parser.add_argument('-vl', '--valid_set', type=str) # 
     parser.add_argument('-fl', '--use_focal_loss', default = False, type=bool)
     parser.add_argument('-w_loss', '--use_loss_weight', default = False)
     parser.add_argument('-t_bs', '--train_batch_size', default=100, type=int)
     parser.add_argument('-v_bs', '--valid_batch_size', default=32, type=int)
     parser.add_argument('-drop_p', '--dropout_percent', default = 0.2)
-    parser.add_argument('-sp', '--save_path') #
-    parser.add_argument('-e', '--epochs', default = 10)
-    parser.add_argument('-wr', '--warm_up_rate', default = 0.2)
-    parser.add_argument('-de', '--device', default='cuda')
+    parser.add_argument('-sp', '--save_path', type=str) #
+    parser.add_argument('-e', '--epochs', default = 10, type=int)
+    parser.add_argument('-wr', '--warm_up_rate', default = 0.2, type=float)
+    parser.add_argument('-de', '--device', default='cuda', type=str)
     parser.add_argument('-p_name', "--wandb_project_name", default="Project", type=str)
 
     parameters = parser.parse_args()

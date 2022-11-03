@@ -33,10 +33,10 @@ def get_params():
     parser.add_argument('-bc', '--base_model_ckpt', type=str)
     parser.add_argument('-s_fbc', '--selected_finetune_checkpoint', type=str)
     parser.add_argument('-vl', '--valid_set', type=str)
-    parser.add_argument('-w_loss', '--use_loss_weight', default = False)
+    parser.add_argument('-w_loss', '--use_loss_weight', default = False, type=bool)
     parser.add_argument('-bs', '--valid_batch_size', default=32, type=int)
     parser.add_argument('-drop_p', '--dropout_percent', default=0.2, type=float)
-    parser.add_argument('-de', '--device')
+    parser.add_argument('-de', '--device', default="cuda", type=str)
 
     parameters = parser.parse_args()
 
