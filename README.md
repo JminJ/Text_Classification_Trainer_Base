@@ -57,17 +57,6 @@ python code/huggingface_model/valid.py \
 | dropout_percent | float | percent value using in dropout | 0.2 |
 | device | str | device use in training | "cuda" |
 
-| use_focal_loss | bool | decising use Focal Loss | False |
-
-| train_batch_size | int | batch size for model train | 100 |
-
-
-| save_path | str | base path using for save train model checkpoint | - |
-| epochs | int | epochs using in training | 10 |
-| warmup_rate | float | percent for learning-rate warmup | 0.2 |
-
-| wandb_project_name | str | this project's name for wandb initializing | "Project" |
-
 </br>
 
 ## Contact
