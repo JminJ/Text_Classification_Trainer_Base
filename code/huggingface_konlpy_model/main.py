@@ -123,7 +123,7 @@ def main(parameters) -> None:
 
     optimizer = AdamW(params = train_operation.model.parameters(), lr = float(parameters.learning_rate))
 
-    num_batchs = len(train_dataloader)
+    num_batchs = len(train_dataloader) * parameters.epochs
     num_warmup_steps = calc_warmup_steps(parameters, num_batchs)
     lr_scheduler = get_cosine_schedule_with_warmup(optimizer = optimizer, num_warmup_steps = num_warmup_steps, num_training_steps = num_batchs)
 
