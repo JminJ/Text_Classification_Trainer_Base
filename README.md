@@ -44,7 +44,6 @@ python code/huggingface_model/valid.py \
     --valid_set=VALID_DATASET_PATH \
     --device=DEVICE \
     --valid_batch_size=32 \
-    --epochs=5 \
 ```
 ### parameters
 | parameter | type | description | default |
