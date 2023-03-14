@@ -61,4 +61,4 @@ python code/huggingface_model/valid.py \
 ## Contact
 * jminju254@gmail.com
 ## Reference
-* [Huffingface](https://huggingface.co/docs/transformers/index)
+* [Huggingface](https://huggingface.co/docs/transformers/index)
